@@ -1,5 +1,5 @@
 fun main() {
-    val NUMBER = 60
+
     val secondsAll = 6480
     val minutesAll = secondsAll / NUMBER
     val sec = secondsAll % NUMBER
@@ -7,4 +7,7 @@ fun main() {
     val hours = minutesAll / NUMBER
     val time = String.format("%02d:%02d:%02d", hours, min, sec)
     println(time)
+
 }
+
+const val NUMBER = 60
