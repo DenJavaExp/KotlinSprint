@@ -4,14 +4,14 @@ fun main() {
 
      val treningToday = 5
      val evenNumbered = 0
-     val checksDay = 2
+     val checks = treningToday % 2
 
      println(
           """
-          Упражнения для рук: ${treningToday % checksDay != evenNumbered}
-          Упражнения для ног: ${treningToday % checksDay == evenNumbered}
-          Упражнения для спины: ${treningToday % checksDay == evenNumbered}
-          Упражнения для пресса: ${treningToday % checksDay != evenNumbered}
+          Упражнения для рук: ${checks != evenNumbered}
+          Упражнения для ног: ${checks == evenNumbered}
+          Упражнения для спины: ${checks == evenNumbered}
+          Упражнения для пресса: ${checks != evenNumbered}
      """.trimIndent()
      )
 
