@@ -1,19 +1,18 @@
-import java.util.Scanner
+package lesson4
 
 fun main() {
 
-    val damage =  Scanner(System.`in`)
-    val conditionShip = damage.nextBoolean()
-    val crew = Scanner(System.`in`)
-    val numberOfCrew = crew.nextInt()
-    val food = Scanner(System.`in`)
-    val numberOffood = food.nextInt()
-    val weather =  Scanner(System.`in`)
-    val goodWeather = weather.nextBoolean()
+    val damage = readln().toBoolean()
+    val crew = readln().toInt()
+    val food = readln().toInt()
+    val weather = readln().toBoolean()
 
-    println("${(conditionShip || numberOfCrew == 70 || numberOffood == 50) 
-            && (numberOfCrew in 55 .. 70) 
-            && (numberOffood >= 50) && goodWeather}" )
+    println(
+        "${
+            (damage || crew == 70 || food == 50) &&
+                    (crew in 55..70) && (food >= 50) && weather
+        }"
+    )
 
 }
 
