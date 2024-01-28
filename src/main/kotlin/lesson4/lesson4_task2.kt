@@ -10,18 +10,18 @@ fun main() {
     println(
         "Груз с весом 20 кг и объемом 80 л соответствует категории 'Average': " +
                 "${
-                    (weightCargo1 >= MIN_WEIGHT)
-                            && (weightCargo1 <= MAX_WEIGHT)
-                            && (volumeCargo1 < MAX_VOLUME)
+                    (weightCargo1 >= MIN_WEIGHT) && 
+                            (weightCargo1 <= MAX_WEIGHT) && 
+                            (volumeCargo1 < MAX_VOLUME)
                 }"
     )
 
     println(
         "Груз с весом 50 кг и объемом 100 л соответствует категории 'Average': " +
                 "${
-                    (weightCargo2 >= MIN_WEIGHT)
-                            && (weightCargo2 <= MAX_WEIGHT)
-                            && (volumeCargo2 < MAX_VOLUME)
+                    (weightCargo2 >= MIN_WEIGHT) && 
+                            (weightCargo2 <= MAX_WEIGHT) && 
+                            (volumeCargo2 < MAX_VOLUME)
                 }"
     )
 
