@@ -5,7 +5,7 @@ fun main() {
     println("Введите ваш год рождения:")
     val userAge = CURRENT_YEAR - readln().toInt()
     val resultText = if (userAge >= AGE_OF_MAJORITY) "Показывать экран со скрытым контентом"
-    else "Вернуться на гд=лавный экран"
+    else "Вернуться на главный экран"
     println(resultText)
 
 }
