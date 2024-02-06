@@ -1,16 +1,10 @@
 package lesson6
 
 fun main() {
-    val check = 1
-    while (check > 0) {
-        println("Введите количество секунд работы программы")
-        var userSeconds = readln().toInt()
+    val userSeconds = readln().toLong()
 
-        while (userSeconds > 0) {
-            userSeconds--
-            Thread.sleep(1000)
-        }
-        println("Прошло ${check * 10} секунд")
-    }
+    Thread.sleep(1000 * userSeconds)
+    println("Прошло $userSeconds секунд")
 }
+
 
