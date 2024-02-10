@@ -1,14 +1,16 @@
 package lesson7
 
 fun main() {
+    var code: Int
+    var userCode: Int
 
     do {
-        val num = (1000 until 10000).random()
-        println("Ваш код авторизации: $num")
+        code = (1000 until 10000).random()
+        println("Ваш код авторизации: $code")
         println()
         println("Введите ваш код авторизации: ")
-        val userNum = readln().toInt()
-    } while (num != userNum)
+        userCode = readln().toInt()
+    } while (code != userCode)
 
     println("Добро пожаловать!")
 
