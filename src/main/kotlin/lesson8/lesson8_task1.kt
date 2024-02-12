@@ -8,7 +8,6 @@ fun main() {
         advertisement += i
     }
     println(advertisement)
-
 }
 
 
