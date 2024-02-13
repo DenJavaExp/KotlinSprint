@@ -8,8 +8,8 @@ fun main() {
     val userIngredient = readln()
     var check: Int = 0
 
-    for (i in recipe) {
-        if (userIngredient == i) println("Ингредиент $i в рецепте есть")
+    for (ingredient in recipe) {
+        if (userIngredient == ingredient) println("Ингредиент $ingredient в рецепте есть")
         check++
     }
 
