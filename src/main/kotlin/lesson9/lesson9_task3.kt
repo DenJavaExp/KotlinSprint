@@ -12,7 +12,6 @@ fun main() {
                 "молока – ${newListIngridient[1]}, " +
                 "сливочного масла – ${newListIngridient[2]}"
     )
-
 }
 
 
