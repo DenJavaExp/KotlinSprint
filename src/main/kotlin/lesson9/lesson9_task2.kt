@@ -6,7 +6,7 @@ fun main() {
     println("В рецепте есть базовые ингредиенты: $listIngridient")
     println("Желаете добавить еще?")
     val userDecision = readln()
-    if (userDecision == "да") {
+    if (userDecision.equals("да", ignoreCase = true)) {
         println("Какой ингредиент вы хотите добавить?")
         val userIngridient = readln()
         listIngridient.add(userIngridient)
@@ -14,6 +14,5 @@ fun main() {
     } else {
         return
     }
-
 }
 
