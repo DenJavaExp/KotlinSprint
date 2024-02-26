@@ -6,9 +6,9 @@ fun main() {
     val castHuman = cast()
     val castMachine = cast()
     println("Бросайте кости:")
-    println("$name1 бросил кости и выполо значение ${castHuman}, " +
-            "$name2 бросил кости и выполо значение " +
-            "${castMachine}, ${castCompare(castHuman, castMachine)}")
+    println("$name1 бросил кости и выполо значение ${castHuman}, \n" +
+            "$name2 бросил кости и выполо значение ${castMachine}")
+    println(castCompare(castHuman, castMachine))
 }
 
 fun cast(): Int = (1..6).random()
