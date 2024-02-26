@@ -26,3 +26,4 @@ fun castCompare (castHuman: Int?, castMachine: Int?) {
     }
 }
 
+//проверка
