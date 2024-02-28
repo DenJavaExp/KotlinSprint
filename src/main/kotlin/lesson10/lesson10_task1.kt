@@ -3,27 +3,28 @@ package lesson10
 fun main() {
     val name1 = "Human"
     val name2 = "Machine"
-    val castHuman = cast()
-    val castMachine = cast()
+    val castHuman = points()
+    val castMachine = points()
+
     println("Бросайте кости:")
-    println("$name1 бросил кости и выполо значение ${castHuman}, \n" +
-            "$name2 бросил кости и выполо значение ${castMachine}")
-    println(castCompare(castHuman, castMachine))
+    println(
+        "$name1 бросил кости и выполо значение ${castHuman}, \n" +
+                "$name2 бросил кости и выполо значение ${castMachine}"
+    )
+    println(comparesPoints(castHuman, castMachine))
 }
 
-fun cast(): Int = (1..6).random()
+fun points(): Int = (1..6).random()
 
-fun castCompare (castHuman: Int?, castMachine: Int?) {
+fun comparesPoints(castHuman: Int, castMachine: Int) {
 
-    if (castHuman != null) {
-        if (castHuman < castMachine!!) {
-            println("Победил компьютер!")
-        } else if (castHuman > castMachine) {
-            println("Победил человек!")
-        } else {
-            println("Победила дружба!)")
-        }
+    if (castHuman < castMachine) {
+        println("Победил компьютер!")
+    } else if (castHuman > castMachine) {
+        println("Победил человек!")
+    } else {
+        println("Победила дружба!)")
     }
 }
 
-//проверка
+
