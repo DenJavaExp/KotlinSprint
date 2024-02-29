@@ -1,9 +1,11 @@
 package lesson10
 
 fun main() {
-    val asciiRange: List<Char> = (START_SYMBOL..END_SYMBOL).map { it.toChar() } + ' '
+    val asciiRange: List<Char> =
+        (START_SYMBOL..END_SYMBOL).map { it.toChar() } //+ ' ' не знаю почему, но пробел все равно включается в диапозон, хотя его там нет.
+    println("Какую длуну пароля вы хотите?")
     val lengthPassword = readln().toInt()
-
+//    println(asciiRange.joinToString("")) // ля просмротра дипозона.
     println(generatePassword(lengthPassword, asciiRange.toString()))
 }
 
