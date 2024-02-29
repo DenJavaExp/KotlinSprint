@@ -1,21 +1,19 @@
 package lesson10
 
-import java.lang.StringBuilder
-
 fun main() {
-
-    val charPassword = "0123456789!&#'()$*+,-./% " + "\""
+    val asciiRange: List<Char> = (START_SYMBOL..END_SYMBOL).map { it.toChar() } + ' '
     val lengthPassword = readln().toInt()
-    println(generatePassword(lengthPassword, charPassword))
+
+    println(generatePassword(lengthPassword, asciiRange.toString()))
 }
 
-fun generatePassword(length: Int, charPassword: String): String {
-    val sb = StringBuilder(length)
-    for (i in 0 until length) {
-        val random = (charPassword.indices).random()
-        sb.append(charPassword[random])
+const val START_SYMBOL = 33
+const val END_SYMBOL = 57
 
-    }
-    return sb.toString()
+fun generatePassword(lengthPassword: Int, asciiRange: String): String {
+    val generatePassword = (asciiRange.indices).shuffled().take(lengthPassword)
+    val randomChars = generatePassword.map { asciiRange[it] }
+
+    return randomChars.joinToString("")
 }
 
