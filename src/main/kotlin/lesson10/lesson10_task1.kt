@@ -1,26 +1,26 @@
 package lesson10
 
 fun main() {
-    val name1 = "Human"
-    val name2 = "Machine"
-    val castHuman = points()
-    val castMachine = points()
+    val human = "Human"
+    val computer = "Machine"
+    val pointsHuman = rollDice()
+    val pointsMachine = rollDice()
 
     println("Бросайте кости:")
     println(
-        "$name1 бросил кости и выполо значение ${castHuman}, \n" +
-                "$name2 бросил кости и выполо значение ${castMachine}"
+        "$human бросил кости и выполо значение ${pointsHuman}, \n" +
+                "$computer бросил кости и выполо значение ${pointsMachine}"
     )
-    println(comparesPoints(castHuman, castMachine))
+    println(decideWinner(pointsHuman, pointsMachine))
 }
 
-fun points(): Int = (1..6).random()
+fun rollDice(): Int = (1..6).random()
 
-fun comparesPoints(castHuman: Int, castMachine: Int) {
+fun decideWinner(pointsHuman: Int, pointsMachine: Int) {
 
-    if (castHuman < castMachine) {
+    if (pointsHuman < pointsMachine) {
         println("Победил компьютер!")
-    } else if (castHuman > castMachine) {
+    } else if (pointsHuman > pointsMachine) {
         println("Победил человек!")
     } else {
         println("Победила дружба!)")
