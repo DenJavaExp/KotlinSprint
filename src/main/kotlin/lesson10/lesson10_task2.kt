@@ -1,27 +1,25 @@
 package lesson10
 
 fun main() {
+    println("Придумайте логин который должен содержать минимум 4 символа:")
     val userLogin = readln()
+    println("Придумайте пароль который должен содержать минимум 4 символа:")
     val userPassword = readln()
-    val charArreyLogin: CharArray = toCharacterArray(userLogin)
-    val charArreyPassword: CharArray = toCharacterArray(userPassword)
 
-    calculateLength(charArreyLogin, charArreyPassword)
+    calculateLength(userLogin, userPassword)
 }
 
 const val MIN_LENGTH_LOGIN_PASSWORD = 4
 
 
-fun calculateLength(charArreyLogin: CharArray, charArreyPassword: CharArray) {
-    if (charArreyPassword.size > MIN_LENGTH_LOGIN_PASSWORD && charArreyLogin.size > MIN_LENGTH_LOGIN_PASSWORD) {
+fun calculateLength(userLogin: String, userPassword: String) {
+
+    if (userLogin.length < MIN_LENGTH_LOGIN_PASSWORD && userPassword.length < MIN_LENGTH_LOGIN_PASSWORD) {
         println("Логин или пароль недостаточно длинные")
     } else {
         println("Welcome")
     }
 }
 
-fun toCharacterArray(str: String): CharArray {
-    return str.toCharArray()
-}
 
 
