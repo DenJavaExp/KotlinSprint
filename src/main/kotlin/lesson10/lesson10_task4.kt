@@ -31,12 +31,13 @@ fun main() {
         endWordRound = if (countGame <= 4) "а" //окончание слова "раунд" в зависимости от значения
         else "ов"
 
-        if (userResponse == "да") {
+        if (userResponse.equals("да", ignoreCase = true)) {
             wantGame = true
             continue
-        } else if (userResponse == "нет")
+        } else if (userResponse.equals("нет", ignoreCase = true))
             wantGame = false
-        println("Вы сыграл $countGame раунд$endWordRound . Счет человека $allPointHuman, счет компьютера $allPointMachine")
+
+        println("Вы сыграли $countGame раунд$endWordRound . Счет человека $allPointHuman, счет компьютера $allPointMachine")
     }
 }
 
