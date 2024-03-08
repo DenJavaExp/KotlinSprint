@@ -5,8 +5,9 @@ class User2(
     var login: String,
     var password: String,
     var mail: String,
-    var bio: String?,
-)
+) {
+    lateinit var bio: String
+}
 
 fun printInfo(
     id: Int,
@@ -46,7 +47,6 @@ fun main() {
             login = "Denis",
             password = "1@3$",
             mail = "denis@mail.ru",
-            bio = null,
         )
 
     printInfo(user1.id, user1.login, user1.password, user1.mail)
