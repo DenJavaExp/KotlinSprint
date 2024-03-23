@@ -1,23 +1,19 @@
 class CategoryDish(
     val nameCategory: String,
     val shortDescription: String,
+    val recipeMap: MutableMap<String, String> = mutableMapOf(),
 ) {
     fun showCategoryDish() {
         println("Категория: $nameCategory,\nОписание: $shortDescription")
     }
-}
 
-class Recipes(
-    val nameRecipes: String,
-    val recipesMap: MutableMap<String, String>,
-) {
     fun showRecipesView() {
-        println(nameRecipes)
-        println(recipesMap)
+        println(nameCategory)
+        println(recipeMap)
     }
 }
 
-class Ingridients(
+class Ingridient(
     val nameDish: String,
     val cookingMethod: String,
     var ingredientsWithGrams: MutableMap<String, Int>,
@@ -67,7 +63,7 @@ fun main() {
         )
 
     val ingridientsBurger =
-        Ingridients(
+        Ingridient(
             nameDish = "Бургер",
             cookingMethod =
                 "1. Нагрей сковороду на среднем огне и добавь немного масла.\n" +
@@ -88,9 +84,10 @@ fun main() {
         )
 
     val recipesBurgers =
-        Recipes(
-            nameRecipes = "Бургеры",
-            recipesMap =
+        CategoryDish(
+            nameCategory = "Бургеры",
+            shortDescription = "",
+            recipeMap =
                 mutableMapOf(
                     "Бургер с помидорами" to "Классический бургер",
                     "чизбургер на столе" to "Чизбургер",
