@@ -1,15 +1,17 @@
 package lesson12.task3
 
-class WeatherToDay {
-    var daytimeTemperature: Int = 0
-    var nightTemperature: Int = 0
-    var precipitation: Boolean = false
+const val CELSIUM = 273
 
-    fun showWeatherCelsius() {
+class WeatherToDay(_daytimeTemperature: Int, _nightTemperature: Int, _precipitation: Boolean) {
+    var daytimeTemperature: Int = _daytimeTemperature - CELSIUM
+    var nightTemperature: Int = _nightTemperature - CELSIUM
+    var precipitation: Boolean = _precipitation
+
+    fun showWeather() {
         println(
             "Погода на сегодня:\n" +
-                "температура днем ${daytimeTemperature - 273} \n" +
-                "температура ночью ${(nightTemperature - 273)}",
+                "температура днем $daytimeTemperature \n" +
+                "температура ночью $nightTemperature",
         )
 
         if (!precipitation) {
@@ -21,9 +23,7 @@ class WeatherToDay {
 }
 
 fun main() {
-    val weatherToDay = WeatherToDay()
-    weatherToDay.daytimeTemperature = 285
-    weatherToDay.nightTemperature = 273
-    weatherToDay.precipitation = true
-    weatherToDay.showWeatherCelsius()
+    val weatherToDay =
+        WeatherToDay(285, 273, true)
+    weatherToDay.showWeather()
 }
