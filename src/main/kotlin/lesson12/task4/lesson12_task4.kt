@@ -25,5 +25,6 @@ class WeatherToDay(_daytimeTemperature: Int, _nightTemperature: Int, _precipitat
 fun main() {
     val weatherToDay =
         WeatherToDay(285, 273, true)
+
     weatherToDay.showWeather()
 }
