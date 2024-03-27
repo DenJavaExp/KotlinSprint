@@ -22,7 +22,6 @@ class Weather {
 
 fun main() {
     val weatherToday = Weather()
-
     weatherToday.daytimeTemperature = 12
     weatherToday.nightTemperature = 0
     weatherToday.precipitation = true
