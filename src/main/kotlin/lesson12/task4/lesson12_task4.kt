@@ -7,7 +7,7 @@ class WeatherToDay(_daytimeTemperature: Int, _nightTemperature: Int, _precipitat
     var nightTemperature: Int = _nightTemperature - CELSIUM
     var precipitation: Boolean = _precipitation
 
-    fun showWeather() {
+    init {
         println(
             "Погода на сегодня:\n" +
                 "температура днем $daytimeTemperature \n" +
@@ -26,5 +26,5 @@ fun main() {
     val weatherToDay =
         WeatherToDay(285, 273, true)
 
-    weatherToDay.showWeather()
+    weatherToDay
 }
