@@ -34,7 +34,8 @@ fun main() {
             ),
         )
 
-    for (person in listPhoneBook) {
-        println(person.companyName)
-    }
+    val companyNames =
+        listPhoneBook.mapNotNull { it.companyName }.also {
+            println(it)
+        }
 }
