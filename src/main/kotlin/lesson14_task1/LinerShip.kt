@@ -9,7 +9,7 @@ open class LinerShip(
     }
 
     fun sailAway() {
-        println("$name начал движение и набрал максимаьную скорость $speed узлов")
+        println("$name начал движение и набрал максимаьную скорость $speed узлов!")
     }
 
     fun moor() {
