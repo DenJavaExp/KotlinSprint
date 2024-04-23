@@ -12,9 +12,13 @@ class Carp : Floating {
     }
 }
 
-class Duck : Flying {
+class Duck : Flying, Floating {
     override fun fly() {
         println("Утка взлетает над озером.")
+    }
+
+    override fun float() {
+        println("Утка поплыла по воде.")
     }
 }
 
@@ -30,6 +34,7 @@ fun main() {
     val seagull = Seagull()
 
     duck.fly()
+    duck.float()
     carp.float()
     seagull.fly()
 }
