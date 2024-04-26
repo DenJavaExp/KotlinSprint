@@ -1,4 +1,4 @@
-abstract class Product(
+open class Product(
     val name: String,
     val quantity: Int,
 )
@@ -16,14 +16,9 @@ class MusicalInstrument(
     }
 }
 
-class Accessoriesname(
-    name: String,
-    quantity: Int,
-) : Product(name = name, quantity = quantity)
-
 fun main() {
     val musicalInstrument = MusicalInstrument("Балалайка", 3)
-    val accessoriesname = Accessoriesname("Комплект струн", 10)
+    val accessoriesname = MusicalInstrument("Комплект струн", 10)
 
     musicalInstrument.searchProduct(accessoriesname.name)
 }
