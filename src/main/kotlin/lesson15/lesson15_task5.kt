@@ -1,38 +1,13 @@
-
-
 var generalСargo: Int = 0
 var allPassanger: Int = 0
 
-open class Car(
-    val mark: String,
-    val passengerCapacity: Int,
-    val cargoCapacity: Int,
-    val speed: Int,
-) : CarMove, PassengerTransportation, CargoTransportation {
-    override fun move() {
-    }
-
-    override fun passengerTransportation() {
-    }
-
-    override fun loadingPassengers() {
-    }
-
-    override fun unloadingPassengers() {
-    }
-
-    override fun cargoTransportation() {
-    }
-
-    override fun loadingCargo() {
-    }
-
-    override fun unloadingCargo() {
-    }
-}
-
-class PassengerCar(mark: String, passengerCapacity: Int, cargoCapacity: Int, speed: Int) :
-    Car(mark = mark, passengerCapacity = 3, cargoCapacity = 0, speed = speed) {
+class PassengerCar(
+    override val mark: String,
+    override val passengerCapacity: Int,
+    override val cargoCapacity: Int,
+    override val speed: Int,
+) :
+    CarMove, PassengerTransportation {
     override fun move() {
         println("$mark Автомобиль тронулся с места и развил скорость $speed км/ч")
     }
@@ -51,8 +26,13 @@ class PassengerCar(mark: String, passengerCapacity: Int, cargoCapacity: Int, spe
     }
 }
 
-class GooseCar(mark: String, passengerCapacity: Int, cargoCapacity: Int, speed: Int) :
-    Car(mark = mark, passengerCapacity = 1, cargoCapacity = 2000, speed = speed) {
+class GooseCar(
+    override val mark: String,
+    override val passengerCapacity: Int,
+    override val cargoCapacity: Int,
+    override val speed: Int,
+) :
+    CarMove, PassengerTransportation, CargoTransportation {
     override fun move() {
         println("Грузовой автомобиль $mark начал движение и развил скорость $speed км/ч")
     }
@@ -84,6 +64,11 @@ class GooseCar(mark: String, passengerCapacity: Int, cargoCapacity: Int, speed: 
 }
 
 interface CarMove {
+    val mark: String
+    val passengerCapacity: Int
+    val cargoCapacity: Int
+    val speed: Int
+
     fun move()
 }
 
