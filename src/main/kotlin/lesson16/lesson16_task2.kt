@@ -1,19 +1,20 @@
+private const val P = 3.14
+
 class Ring(
     private val radius: Double,
 ) {
-    protected val pi = 3.14
-
     fun calculateLengthCircle() {
-        println("Длина окружности равна: ${2 * pi * 1}")
+        println("Длина окружности равна: ${2 * P * 1}")
     }
 
     fun calculateAreaCircle() {
-        println("Плащадь круга равна: ${pi * (radius * radius)}")
+        println("Плащадь круга равна: ${P * (radius * radius)}")
     }
 }
 
 fun main() {
     val circle = Ring(10.0)
+
     circle.calculateLengthCircle()
     circle.calculateAreaCircle()
 }
