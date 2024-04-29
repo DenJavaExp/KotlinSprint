@@ -1,10 +1,10 @@
 class User(
-    private val password: String = "12345password",
+    private val password: String,
 ) {
-    private fun getUser() = password
+    private fun getPassword() = password
 
     fun checkingPassword(passwordUser: String) {
-        return if (getUser() == passwordUser) {
+        return if (getPassword() == passwordUser) {
             println("Пароль введен верно")
         } else {
             println("Вы ввели неверный пароль!")
@@ -13,7 +13,7 @@ class User(
 }
 
 fun main() {
-    val user = User()
+    val user = User("12345password")
     println("Введите пароль:")
     user.checkingPassword(passwordUser = readln())
 }
