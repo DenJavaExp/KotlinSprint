@@ -2,7 +2,7 @@ class Order(
     private val numberOrder: Int,
     private var statusOrder: Boolean,
 ) {
-    fun setStatesOrder(newStatusOrder: Boolean) {
+    private fun setStatesOrder(newStatusOrder: Boolean) {
         statusOrder = newStatusOrder
     }
 
