@@ -5,7 +5,7 @@ class Victrina(
     var question = "Зимой и летом одним цветом?"
         get() = field
 
-    var answer = "Ёлка"
+    var answer = "Ёлка!"
         get() = field
         set(value) {
             field = value
