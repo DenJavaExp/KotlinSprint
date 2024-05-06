@@ -1,22 +1,19 @@
-class PostalParcel {
-    val parcelNumber = 123
-    var movementCounter = 0
-    private var location = "Russia"
-
-    fun setLocation(newLocation: String): Boolean {
-        location = newLocation
-        movementCounter++
-        return true
-    }
-
-    fun getLocation(): String {
-        return location
-    }
+class PostalParcel(
+    parcelNumber: Int,
+    var movementCounter: Int = 0,
+    location: String,
+) {
+    var location = location
+        set(value) {
+            field = value
+            movementCounter++
+            field = value
+        }
 }
 
 fun main() {
-    val postalParcel = PostalParcel()
-    postalParcel.setLocation("USA")
+    val postalParcel = PostalParcel(123, location = "Russia")
+    postalParcel.location = "USA"
     println(postalParcel.movementCounter)
-    println(postalParcel.getLocation())
+    println(postalParcel.location)
 }
