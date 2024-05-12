@@ -2,9 +2,9 @@ open class Figura(
     val name: String,
 )
 
-class Ring(name: String, val coordinateX: Float, val coordinateY: Float, val radius: Float) : Figura(name)
+class Ring(name: String, val coordinateX: Float, val coordinateY: Float) : Figura(name)
 
-class Square(name: String, val coordinateX: Float, val coordinateY: Float, val sideLength: Float) : Figura(name)
+class Square(name: String, val coordinateX: Float, val coordinateY: Float) : Figura(name)
 
 class Dot(name: String, val coordinateX: Int, val coordinateY: Int) : Figura(name)
 
@@ -23,8 +23,8 @@ class Screen {
 }
 
 fun main() {
-    val ring = Ring("Круг", 4.4f, 5.5f, 3.1f)
-    val square = Square("Квадрат", 6.1f, 7.3f, 5.0f)
+    val ring = Ring("Круг", 4.4f, 5.5f)
+    val square = Square("Квадрат", 6.1f, 7.3f)
     val dot = Dot("Точка", 10, 11)
     val screen = Screen()
 
