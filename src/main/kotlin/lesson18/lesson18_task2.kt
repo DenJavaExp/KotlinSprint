@@ -1,43 +1,26 @@
-open class Cube {
-    open fun rollDice() {
+abstract class Cube() {
+    abstract var numberCube: Int
+
+    open fun rollDice(numberCube: Int) {
+        this.numberCube = (0..numberCube).random()
+        println("У кубика с $numberCube гранями \n Выпало знчение: ${this.numberCube}")
     }
 }
 
-class Cube4 : Cube() {
-    override fun rollDice() {
-        val numberCube = (0..4).random()
-        println("У кубика с 4 гранями \n Выпало знчение: $numberCube")
-    }
-}
+class Cube4(override var numberCube: Int) : Cube()
 
-class Cube6 : Cube() {
-    override fun rollDice() {
-        val numberCube = (0..6).random()
-        println(
-            "У кубика с 6 гранями \n" +
-                " Выпало знчение: $numberCube",
-        )
-    }
-}
+class Cube6(override var numberCube: Int) : Cube()
 
-class Cube8 : Cube() {
-    override fun rollDice() {
-        val numberCube = (0..8).random()
-        println(
-            "У кубика с 8 гранями \n" +
-                " Выпало знчение: $numberCube",
-        )
-    }
-}
+class Cube8(override var numberCube: Int) : Cube()
 
 fun main() {
-    val cube4 = Cube4()
-    val cube6 = Cube6()
-    val cube8 = Cube8()
+    val cube4 = Cube4(4)
+    val cube6 = Cube6(6)
+    val cube8 = Cube8(8)
 
     val listCube: List<Cube> = listOf(cube4, cube6, cube8)
     for (i in listCube) {
-        i.rollDice()
+        i.rollDice(i.numberCube)
         println()
     }
 }
