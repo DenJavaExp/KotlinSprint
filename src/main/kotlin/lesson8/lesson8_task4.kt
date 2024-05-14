@@ -6,22 +6,20 @@ fun main() {
     println(recipe.contentToString())
     println("Какой ингридиент вы хатите заменить?")
     val userIngridient = readln()
-    var check = 0
+    val indexIngridient = recipe.indexOf(userIngridient)
 
-    for (i in recipe) {
-        if (userIngridient == i) {
-            println("На какой ингидиент вы хатите заменить $userIngridient")
-            val newUserIngridient = readln()
-            val indexIngridient = recipe.indexOf(userIngridient)
-            recipe.set(indexIngridient, newUserIngridient)
-            check++
-        }
+    if (indexIngridient == -1) {
+        println("Введенного вами ингридиента нет в списке")
+    } else {
+        println("На какой ингидиент вы хатите заменить $userIngridient")
+        val newUserIngridient = readln()
+        recipe[indexIngridient] = newUserIngridient
+        println("Готово! Вы сохранили следующий список: ${recipe.contentToString()}")
     }
 
-    if (check == 0) {
-        println("Введенного вами ингридиента нет в списке")
-    } else println("Готово! Вы сохранили следующий список: ${recipe.contentToString()}")
-
 }
+
+
+
 
 
