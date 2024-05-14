@@ -1,14 +1,13 @@
 fun main() {
-
-    var employees = 50
-    var interns = 30
-    var staffAll = employees + interns
-    var salaryEmployee = 30000
-    var salaryIntern = 20000
-    var sumSalaryEmployees = employees * salaryEmployee
-    var sumSalaryInterns = interns * salaryIntern
-    var sumSalaryStaffAll =  sumSalaryEmployees + sumSalaryInterns
-    var avarageSalary = sumSalaryStaffAll / staffAll
+    val employees = 50
+    val interns = 30
+    val staffAll = employees + interns
+    val salaryEmployee = 30000
+    val salaryIntern = 20000
+    val sumSalaryEmployees = employees * salaryEmployee
+    val sumSalaryInterns = interns * salaryIntern
+    val sumSalaryStaffAll = sumSalaryEmployees + sumSalaryInterns
+    val avarageSalary = sumSalaryStaffAll / staffAll
 
     println("кол-во сотрудников: " + employees)
     println("кол-во интернов: " + interns)
@@ -19,7 +18,4 @@ fun main() {
     println("общие выплоты интернам: " + sumSalaryInterns)
     println("общие выалты всему персоналу: " + sumSalaryStaffAll)
     println("средняя зарплата: " + avarageSalary)
-
 }
-
-
