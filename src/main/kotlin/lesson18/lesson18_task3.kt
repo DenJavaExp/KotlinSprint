@@ -1,13 +1,9 @@
-
-
-open class Animal(
+abstract class Animal(
     name: String,
 ) {
-    open fun eat() {
-    }
+    abstract fun eat()
 
-    open fun sleep() {
-    }
+    abstract fun sleep()
 }
 
 class Fox(val name: String) : Animal(name) {
