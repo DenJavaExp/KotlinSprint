@@ -1,6 +1,5 @@
-open class Box {
-    open fun calculateArea() {
-    }
+abstract class Box {
+    abstract fun calculateArea()
 }
 
 class RectangularBox(
