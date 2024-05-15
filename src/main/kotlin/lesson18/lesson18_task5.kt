@@ -1,34 +1,48 @@
-open class Figura(
-    val name: String,
+class Ring(
+    val radius: Float,
 )
 
-class Ring(name: String, val coordinateX: Float, val coordinateY: Float) : Figura(name)
+class Square(
+    val lengthSide: Int,
+)
 
-class Square(name: String, val coordinateX: Float, val coordinateY: Float) : Figura(name)
+class Dot(
+    val thickness: Float,
+)
 
-class Dot(name: String, val coordinateX: Int, val coordinateY: Int) : Figura(name)
-
-class Screen {
-    fun draw(ring: Ring) {
-        println("Фигура ${ring.name} нарисованна в координатах по оси X - ${ring.coordinateX} и по оси Y - ${ring.coordinateY}")
+class Screen() {
+    fun draw(
+        coordinateX: Int,
+        coordinateY: Int,
+        radius: Float,
+    ) {
+        println("Фигура круг нарисованна в координатах по оси X - $coordinateX и по оси Y - $coordinateY, радус - $radius")
     }
 
-    fun draw(square: Square) {
-        println("Фигура ${square.name} нарисованна в координатах по оси X - ${square.coordinateX} и по оси Y - ${square.coordinateY}")
+    fun draw(
+        coordinateX: Int,
+        coordinateY: Int,
+        lengthSide: Int,
+    ) {
+        println("Фигура квадрат нарисованна в координатах по оси X - $coordinateX и по оси Y - $coordinateY, длина стороны - $lengthSide")
     }
 
-    fun draw(dot: Dot) {
-        println("Фигура ${dot.name} нарисованна в координатах по оси X - ${dot.coordinateX} и по оси Y - ${dot.coordinateY}")
+    fun draw(
+        coordinateX: Float,
+        coordinateY: Float,
+        thickness: Float,
+    ) {
+        println("Фигура точка нарисованна в координатах по оси X - $coordinateX и по оси Y - $coordinateY, ширина - $thickness")
     }
 }
 
 fun main() {
-    val ring = Ring("Круг", 4.4f, 5.5f)
-    val square = Square("Квадрат", 6.1f, 7.3f)
-    val dot = Dot("Точка", 10, 11)
     val screen = Screen()
+    val ring = Ring(12.5f)
+    val square = Square(6)
+    val dot = Dot(1.1f)
 
-    screen.draw(ring)
-    screen.draw(square)
-    screen.draw(dot)
+    screen.draw(4, 5, ring.radius)
+    screen.draw(5, 6, square.lengthSide)
+    screen.draw(5.6f, 5.6f, dot.thickness)
 }
