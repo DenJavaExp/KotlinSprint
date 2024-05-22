@@ -5,7 +5,7 @@ enum class Fish {
     SIAMESE_FIGHTING_FISH,
 }
 
-fun setFish(fish: Fish) {
+fun printFish(fish: Fish) {
     when (fish) {
         Fish.GUPPY -> println("Гуппи")
         Fish.ANGEL_FISH -> println("Cкалярия")
@@ -15,9 +15,9 @@ fun setFish(fish: Fish) {
 }
 
 fun main() {
-    val listFish: List<Fish> = listOf(Fish.GUPPY, Fish.ANGEL_FISH, Fish.GOLD_FISH, Fish.SIAMESE_FIGHTING_FISH)
+    val listFish: List<Fish> = Fish.values().toList()
 
     for (i in listFish) {
-        setFish(fish = i)
+        printFish(fish = i)
     }
 }
