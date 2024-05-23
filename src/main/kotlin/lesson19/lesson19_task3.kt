@@ -8,6 +8,7 @@ class CosmoShip() {
     }
 
     fun shootBack() {
+        // TODO(не забудь прописать реализацию)
     }
 }
 
