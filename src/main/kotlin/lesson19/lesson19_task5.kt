@@ -3,9 +3,9 @@ enum class SEX(val sex: String) {
     WOMAN("Ж"),
 }
 
-class Human(val name: String, val sex: String) {
+class Human(val name: String, val sex: SEX) {
     override fun toString(): String {
-        return "Персона (имя: $name, пол: $sex)"
+        return "Персона (имя: $name, пол: ${sex.sex})"
     }
 }
 
@@ -18,13 +18,14 @@ fun main() {
             println("Введите имя:")
             val name = readln()
             println("Введите пол (М / Ж):")
-            var sex = readln()
-            if (sex == SEX.MAN.sex) {
-                sex = SEX.MAN.sex
-            } else if (sex == SEX.WOMAN.sex) {
-                sex = SEX.WOMAN.sex
-            }
-            val human = Human(name = name, sex)
+            val sexInput = readln()
+            val sex =
+                if (sexInput == SEX.MAN.sex) {
+                    SEX.MAN
+                } else {
+                    SEX.WOMAN
+                }
+            val human = Human(name = name, sex = sex)
             listHuman.add(human)
             countPerson++
         }
