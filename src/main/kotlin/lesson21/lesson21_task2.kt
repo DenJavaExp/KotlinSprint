@@ -1,12 +1,7 @@
 fun main() {
     fun List<Int>.evenNumbersSum(listNum: List<Int>) {
-        var sumEvenNum = 0
-        for (i in listNum) {
-            if (i % 2 == 0) {
-                sumEvenNum += i
-            }
-        }
-        println(sumEvenNum)
+        val result = listNum.filter { it % 2 == 0 }
+        println(result.sum())
     }
 
     val listNum = listOf<Int>(4, 22, 1, 37, 12, 11)
