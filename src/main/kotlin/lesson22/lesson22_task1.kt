@@ -1,6 +1,6 @@
-class RegularBook(val bookNmae: String, val aftorName: String)
+class RegularBook(val bookName: String, val aftorName: String)
 
-data class DataBook(val bookNmae: String, val aftorName: String)
+data class DataBook(val bookName: String, val aftorName: String)
 
 fun main() {
     val regularBook = RegularBook("Онегин", "Пушкин")
