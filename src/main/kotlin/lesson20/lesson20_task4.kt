@@ -1,3 +1,5 @@
+
+
 fun main() {
     val elementList =
         listOf(
@@ -11,13 +13,11 @@ fun main() {
             "элемент 8",
         )
 
-    val mapElement = mutableMapOf<Int, String>()
+    val lambdaMap = elementList.map { element -> element }
 
-    elementList.forEachIndexed { index, s -> mapElement[index + 1] = "Нажат " + s }
-
-    for ((key, value) in mapElement) {
-        if (key % 4 == 0) {
-            println(value)
+    for (i in lambdaMap.indices) {
+        if ((i + 1) % 4 == 0) {
+            println("Нажат ${lambdaMap[i]}")
         }
     }
 }
