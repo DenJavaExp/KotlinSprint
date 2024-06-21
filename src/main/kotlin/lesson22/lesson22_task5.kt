@@ -15,12 +15,12 @@ fun main() {
             "Alpha Centaurip",
             "тройная звёздная система в созвездии Центавра",
             dateNow = Calendar.getInstance().time,
-            distanceToEarth = 4.36,
+            4.36,
         )
 
-    val (namePlaceEvent, descriptionPlaceEvent, dateNow, distanceToEarth) = starSystem
-    println("Имя звездной системы: $namePlaceEvent")
-    println("Описание: $descriptionPlaceEvent")
-    println("Дата и время: $dateNow")
-    println("Расстояние до Земли: $distanceToEarth световых лет")
+    val (component1, component2, component3, component4) = starSystem
+    println("Имя звездной системы: $component1")
+    println("Описание: $component2")
+    println("Дата и время: $component3")
+    println("Расстояние до Земли: $component4 световых лет")
 }
