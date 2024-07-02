@@ -1,5 +1,3 @@
-
-
 fun main() {
     val listIngridient = mutableListOf<String>("перец", "чеснок", "соль")
     println("В рецепте есть базовые ингредиенты: $listIngridient")
