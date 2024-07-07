@@ -1,28 +1,23 @@
 package lesson7
 
-
 fun main() {
-
     println("Какую вы хотите длину пароля? : ")
 
     val lengthPassword = readln().toInt()
-    var randomChar: String
+
     var password = ""
     var charset: Char
     var charset2: Char
     var charset3: Char
-    var charset4: Char
+    var randomChar: String
 
-    for (i in 0..lengthPassword) {
+    for (i in 1..lengthPassword / 3) {
         charset = ('A'..'Z').random()
         charset2 = ('a'..'z').random()
         charset3 = ('0'..'9').random()
-        charset4 = listOf('!', '@', '#', '$', '%', '^', '&', '*', '(', ')').random()
-        randomChar = mutableListOf(charset, charset2, charset3, charset4).random().toString()
+        randomChar = "$charset$charset2$charset3"
         password += randomChar
     }
+
     println(password)
 }
-
-
-
